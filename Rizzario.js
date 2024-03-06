@@ -29,7 +29,7 @@ var navbarLinks = document.querySelectorAll("nav a");
 
 const imgContent = document.querySelector('#Image-Desc'),
 	txtContent = document.querySelector('#Text-Desc');
-const configuration = {
+const configurationMain = {
 	threshold: 0.3,
 	rootMargin: '0px 0px -30% 0px',
 };
@@ -41,7 +41,7 @@ const imgObserver = new IntersectionObserver(entries => {
 	else {
 		imgContent.classList.add('Image-Desc-rm');
 	}
-}, configuration);
+}, configurationMain);
 const txtObserver = new IntersectionObserver(entries => {
 	const [{isIntersecting}] = entries
 	if(isIntersecting) {
@@ -50,12 +50,61 @@ const txtObserver = new IntersectionObserver(entries => {
 	else {
 		txtContent.classList.add('Text-Desc-rm');
 	}
-}, configuration);
+}, configurationMain);
+const interest_img1 = document.querySelector("#react-c"),
+	interest_img2 = document.querySelector("#nodejs-c"),
+	interest_img3 = document.querySelector("#python-c"),
+	interest_img4 = document.querySelector("#js-c"),
+	interest_txt = document.querySelector("#Text-Interests"); 
+const configurationInterest = {
+	threshold: 0.1
+};
+const interest_img1_obs = new IntersectionObserver(entries => {
+	const [{isIntersecting}] = entries
+	  if(isIntersecting) {
+		interest_img1.classList.remove('interest1-ani-rm');
+	  }
+	  else {
+		interest_img1.classList.add('interest1-ani-rm');
+	  }
+}, configurationInterest);
+const interest_img2_obs = new IntersectionObserver(entries => {
+	const [{isIntersecting}] = entries
+	  if(isIntersecting) {
+		interest_img2.classList.remove('interest2-ani-rm');
+	  }
+	  else {
+		interest_img2.classList.add('interest2-ani-rm');
+	  }
+}, configurationInterest);
+const interest_img3_obs = new IntersectionObserver(entries => {
+	const [{isIntersecting}] = entries
+	  if(isIntersecting) {
+		interest_img3.classList.remove('interest3-ani-rm');
+	  }
+	  else {
+		interest_img3.classList.add('interest3-ani-rm');
+	  }
+}, configurationInterest);
+const interest_img4_obs = new IntersectionObserver(entries => {
+	const [{isIntersecting}] = entries
+	  if(isIntersecting) {
+		interest_img4.classList.remove('interest4-ani-rm');
+	  }
+	  else {
+		interest_img4.classList.add('interest4-ani-rm');
+	  }
+}, configurationInterest);
+
 
 window.addEventListener('load', () => {
 	if('IntersectionObserver' in window) {
 		imgObserver.observe(imgContent);
 		txtObserver.observe(txtContent);
+		interest_img1_obs.observe(interest_img1);
+		interest_img2_obs.observe(interest_img1);
+		interest_img3_obs.observe(interest_img4);
+		interest_img4_obs.observe(interest_img4);
 	}
 },false);
 $(document).ready(function() {

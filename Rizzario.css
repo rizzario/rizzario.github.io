@@ -63,7 +63,7 @@ section {
 }
 /*Main Section Tag*/
 .about {
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+	/* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05); */
 	margin-top: 60px;
 }
 .Image-Desc .big {
@@ -130,6 +130,13 @@ section {
 	max-width: 1024px;
 	padding: 2% 4% 0 4%;
 }
+.core {
+	width: 0;
+	height: 0;
+}
+.Contact {
+	margin-top: 50px;
+}
 .text-plain {
 	display: block;
 	margin: auto;
@@ -195,6 +202,7 @@ i#next {
 	height: 100%;
 	width: 100%;
 	justify-content: center;
+	column-gap: 5px;
 	align-items: center;
 	flex-shrink: 0;
 	/* display: none; */
@@ -220,6 +228,41 @@ i#next {
 	margin: 0 20 0 20;
 	position: absolute;
 }
+.interests-tab {
+	--xbar: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	text-align: center !important;
+}
+.interests-tab>* {
+	max-width: 100%;
+	margin-top: 15px;
+	padding-left: calc(var(--xbar) * .5);
+	padding-right: calc(var(--xbar) * .5);
+}
+.interest-group {
+	flex: 0 0 auto;
+	width: 25%;
+}
+.interest-image {
+	border: 2px solid black;
+	border-radius: 85px;
+	padding: 54px 0 48px 0;
+	height: 188px;
+	display: flex;
+	transition: .5s all ease-in-out;
+}
+.interest-image:hover {
+	border: 2px solid var(--main-color);
+}
+.image-70 {
+	width: 70px;
+	display: block;
+	margin: auto;
+}
 .form-div {
 	padding: 0 3% 0 3%;
 }
@@ -231,9 +274,6 @@ i#next {
 	margin: auto;
 	padding: 0 0 2% 0;
 }
-/* .text-plain {
-	
-} */
 .form-detail {
 	display: flex;
 	flex-direction: column;
@@ -638,6 +678,10 @@ footer nav li a:hover {
 	.user-detail {
 		flex-direction: column;
 		width: 100%;
+	}
+	.interest-group {
+		flex: 0 0 auto;
+		width: 50%;
 	}
 }
 /*animation @600*/
