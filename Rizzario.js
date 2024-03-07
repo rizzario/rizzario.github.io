@@ -2,11 +2,13 @@ var slideCard = 1;
 var cardchange = setInterval(changevalShowCard, 5000, 1);
 var formcontact = document.getElementById("email-form");
 
-var navbar = document.getElementsByClassName("headernav");
-// var navPosition = navbar.getBoundingClientRect().top;
-var navbarLinks = document.querySelectorAll("nav a");
+var navbar = document.querySelector(".headernav");
+var sticky = navbar.offsetTop;
+var footerbar = document.querySelector(".footernav");
+var footerval = footerbar.offsetTop;
 
-// console.log("Nav positon " + navPosition);
+console.log("Nav positon " + sticky);
+console.log("Footer positon " + footerval);
 
 // window.addEventListener("scroll", (event) => {
 // 	let scrollPosition = window.scrollY;
@@ -95,7 +97,7 @@ const interest_img4_obs = new IntersectionObserver(entries => {
 		interest_img4.classList.add('interest4-ani-rm');
 	  }
 }, configurationInterest);
-
+window.onscroll = function() {stickynav()};
 
 window.addEventListener('load', () => {
 	if('IntersectionObserver' in window) {
@@ -151,6 +153,15 @@ addEventListener("click", function( event ) {
 	sendemail();
 }); 
 
+function stickynav() {
+	console.log(window.scrollY)
+	if (window.scrollY >= sticky) {
+		navbar.classList.add("sticky")
+	}
+	else{
+		navbar.classList.remove("sticky");
+	}
+}
 function getRandomColor() {
 	var letters = '0123456789ABCDEF';
     var color = '#';

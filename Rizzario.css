@@ -7,6 +7,9 @@
 	--font-light-y: #fcef14;
 }
 /*header*/
+header {
+	z-index: 4;
+}
 
 /*body*/
 body {
@@ -171,7 +174,7 @@ i.buttonslide {
 	color: #fff;
 	font-size: 15px;
 	transition: all 0.4s linear;
-	z-index: 100;
+	z-index: 3;
 	cursor: pointer;
 }
 i.buttonslide:active {
@@ -263,6 +266,11 @@ i#next {
 	display: block;
 	margin: auto;
 }
+.image-120 {
+	width: 120px;
+	display: block;
+	margin: auto;
+}
 .form-div {
 	padding: 0 3% 0 3%;
 }
@@ -316,7 +324,9 @@ i#next {
 
 .form-detail button {
   	padding: 12px 20px;
-  	border: 1px solid black;
+  	border: 1px solid var(--font-light-w);
+	background-color: var(--main-color);
+	color: var(--font-light-w);
 	text-align: center;
   	border-radius: 4px;
   	cursor: pointer;
@@ -325,6 +335,9 @@ i#next {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: bold;
+}
+.form-detail button:hover {
+	color: var(--font-light-y);
 }
 .user-detail {
 	display: flex;
@@ -381,6 +394,27 @@ header nav li a {
 	-ms-transition: all .25s ease;
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
+}
+.group-social {
+	top: 0;
+	padding: 0 4% 0 4%;
+	margin-top: -5px;
+	float: right;
+}
+.social-icon {
+	margin: 0 4px 0 4px;
+	width: 35px;
+	height: 35px;
+	/* margin-bottom: 9%; */
+}
+.social-icon-github {
+	margin: 0 4px 0 4px;
+	width: 28px;
+	height: 28px;
+	margin-bottom: 5.5%;
+}
+.social-icon-github:hover {
+	color: red;
 }
 .icon-nav {
 	display: none;
@@ -580,6 +614,7 @@ footer nav li a:hover {
 		margin: 5.5px auto;
 		transition: all 0.3s ease-in-out;
 	  }
+
 	.icon-nav {
 		display: block;
 		position: absolute;
