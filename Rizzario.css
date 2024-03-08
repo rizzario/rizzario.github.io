@@ -7,9 +7,6 @@
 	--font-light-y: #fcef14;
 }
 /*header*/
-header {
-	z-index: 4;
-}
 
 /*body*/
 body {
@@ -425,6 +422,7 @@ header nav li a:hover {
 .sticky {
 	position: fixed;
 	top: 0;
+	z-index: 4;
 }
 /* Tab button s section */
 .tab-button {
@@ -667,7 +665,7 @@ footer nav li a:hover {
 	header nav.responsive {
 		opacity: 1;
 		visibility: visible;
-		height: 180px;
+		height: 210px;
 	}
 	.Image-Desc .big {
 		transform: translate(-50%,0%);
