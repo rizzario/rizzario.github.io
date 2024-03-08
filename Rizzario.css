@@ -382,7 +382,7 @@ header nav li a {
 	margin: auto;
 	text-decoration: none;
 	color: var(--font-light-w);
-	font-family: Comic Sans MS;
+	font-family: "Comic Sans MS";
 	font-size: 18px;
 	font-weight: bold;
 	-webkit-transition: all .25s ease;	
@@ -516,7 +516,7 @@ footer nav li a {
 	padding: 12px;
 	text-decoration: none;
 	color: var(--font-light-w);
-	font-family: Comic Sans MS;
+	font-family: "Comic Sans MS";
 	font-size: 17px;
 	font-weight: bold;
 	list-style: none;
@@ -533,7 +533,7 @@ footer nav li a {
 .copyright-text span {
 	color: var(--font-light-w);
 	/*font color*/
-	font-family: Comic Sans MS;
+	font-family: "Comic Sans MS";
 	/*font style*/
 	font-size: 17px;
 	font-weight: bold;
