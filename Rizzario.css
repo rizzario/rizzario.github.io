@@ -54,6 +54,8 @@ ol, ul {
 section {
 	max-width: 1280px;
 	margin: auto;
+	top: 35px;
+	position: relative;
 }
 /*row class*/
 .row,.row-contact {
@@ -500,6 +502,7 @@ footer {
 	position: relative;
 	bottom: 0px;
 	width: 100%;
+	top: 35px;
 }
 footer nav {
 	float: right;

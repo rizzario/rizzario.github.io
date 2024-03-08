@@ -138,6 +138,13 @@ listbuttonskill.forEach((button, index) => {
 		clearTime();
 	})
 });
+const listbuttonheader = document.querySelectorAll(".header-btn").
+	forEach(btn => {
+		btn.addEventListener("click", function() {
+		iconnav.classList.toggle("icon-nav-active");
+		topnav.classList.toggle("responsive");
+	})
+});
 const buttonprev = document.querySelector(".fa-arrow-left").
 addEventListener("click", function () {
 	showCard(slideCard -= 1);
