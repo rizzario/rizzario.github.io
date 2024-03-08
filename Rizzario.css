@@ -368,7 +368,6 @@ header {
 header nav {
 	display: block;
 	position: static;
-	width: auto;
 	text-align: center;
 }
 header nav li {
@@ -615,7 +614,6 @@ footer nav li a:hover {
 		margin: 5.5px auto;
 		transition: all 0.3s ease-in-out;
 	  }
-
 	.icon-nav {
 		display: block;
 		position: absolute;
@@ -625,12 +623,16 @@ footer nav li a:hover {
 		padding:16px 16px 0 0;
 		transition: all 0.3s ease-in-out;
 	}
+	.sticky {
+		width: 100vw;
+	}
 	header nav {
 		opacity: 0;
 		visibility: hidden;
 		overflow: hidden;
 		position: absolute;
 		left: 0;
+		float: left;
 		margin: auto;
 		width: 100%;
 		color: var(--font-light-y);
@@ -683,12 +685,12 @@ footer nav li a:hover {
 		height: 400px;
 	}
 	.Text-about {
-		transform: translate(10%, 0%);
-		position: static;
+		transform: translate(-50%, 0%);
+		position: relative;
 	}
 	.Image-Desc .big {
-		transform: translate(40%, 0%);
-		position: static;
+		transform: translate(-50%, 0%);
+		position: relative;
 	}
 	#Text-Desc{
 		margin: 0;
