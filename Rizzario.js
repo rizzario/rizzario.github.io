@@ -7,8 +7,8 @@ var sticky = navbar.offsetTop;
 var footerbar = document.querySelector(".footernav");
 var footerval = footerbar.offsetTop;
 
-console.log("Nav positon " + sticky);
-console.log("Footer positon " + footerval);
+// console.log("Nav positon " + sticky);
+// console.log("Footer positon " + footerval);
 
 // window.addEventListener("scroll", (event) => {
 // 	let scrollPosition = window.scrollY;
@@ -154,7 +154,7 @@ addEventListener("click", function( event ) {
 }); 
 
 function stickynav() {
-	console.log(window.scrollY)
+	// console.log(window.scrollY)
 	if (window.scrollY >= sticky) {
 		navbar.classList.add("sticky")
 	}
