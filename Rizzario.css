@@ -388,7 +388,7 @@ header nav li a {
 	margin: auto;
 	text-decoration: none;
 	color: var(--font-light-w);
-	font-family: "Comic Sans MS";
+	font-family: 'Gill Sans';
 	font-size: 18px;
 	font-weight: bold;
 	-webkit-transition: all .25s ease;	
