@@ -188,6 +188,7 @@ function clearTime(){
 function showCard(n) {
 	// var i;
 	var x = document.getElementsByClassName("slider-content");
+	// var x = document.querySelectorAll(".slider-content");
 	var y = document.querySelectorAll(".button-skill");
 
 	if(n > x.length) {slideCard = 1}
@@ -196,9 +197,10 @@ function showCard(n) {
 		y[i].classList.remove("active");
 	}
 
-	var position = (slideCard - 1) * 100;
+	var position = ((slideCard - 1) * 100);
 	y[slideCard - 1].classList.add("active");
 	$(x).css({'transform':'translateX(-' + position + '%)'});
+	// document.documentElement.style.setProperty('--position','${position}' + '%');
 }
 function sendemail() {
 
