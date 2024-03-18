@@ -94,7 +94,7 @@ const interest_img4_obs = new IntersectionObserver(entries => {
 		interest_img4.classList.add('interest4-ani-rm');
 	  }
 }, configurationInterest);
-window.onscroll = function() {stickynav()};
+// window.onscroll = function() {stickynav()};
 
 window.addEventListener('load', () => {
 	if('IntersectionObserver' in window) {
@@ -163,7 +163,7 @@ function stickynav() {
 		navbar.classList.add("sticky")
 	}
 	else{
-		navbar.classList.remove("sticky");
+		// navbar.classList.remove("sticky");
 	}
 }
 function getRandomColor() {

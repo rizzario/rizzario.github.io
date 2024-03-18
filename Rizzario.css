@@ -10,6 +10,7 @@
 /*html*/
 html {
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 /*body*/
@@ -55,7 +56,7 @@ ol, ul {
 	overflow-wrap: break-word;
 }
 /*section*/
-section:not(.main) {
+section {
 	max-width: 1280px;
 	margin: auto;
 	top: 35px;
@@ -353,7 +354,7 @@ i#next {
 	padding: 0.25rem 0.75rem 0.25rem 0.25rem;
 }
 /*top navigation bar*/
-header {
+#header {
 	background-color: var(--main-color);
 	margin: 0px;
 	clear: both;
@@ -362,7 +363,10 @@ header {
 	vertical-align: middle;
 	line-height: normal;
 	margin: 0;
-	position: relative;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 4;
 	bottom: 0px;
 	width: 100%;
 }
@@ -370,27 +374,29 @@ header {
 	margin: 0 auto;
 	max-width: 1024px;
 }
-header nav {
+#header nav {
 	display: block;
 	position: static;
 	text-align: center;
 }
-header nav li {
+#header nav li {
 	display: inline-block;
 	float: left;
 	position: relative;
 	border: 0;
 	list-style: none;
 }
-header nav li a {
+#header nav li a {
 	display: block;
 	padding: 0 1em;
 	margin: auto;
 	text-decoration: none;
 	color: var(--font-light-w);
-	font-family: 'Gill Sans';
-	font-size: 18px;
-	font-weight: bold;
+	font-family: "Lora", serif;
+	font-size: 20px;
+	font-weight: 500;
+	font-style: italic;
+	font-optical-sizing: auto;
 	-webkit-transition: all .25s ease;	
 	/*fadding time*/
 	-moz-transition: all .25s ease;
@@ -422,14 +428,15 @@ header nav li a {
 .icon-nav {
 	display: none;
 }
-header nav li a:hover {
+#header nav li a:hover {
 	color: var(--font-light-y);
 }
-.sticky {
-	position: fixed;
+/* .sticky {
+	position: fixed !important;
 	top: 0;
+	width: 100%;
 	z-index: 4;
-} 
+}  */
 /* Tab button s section */
 .tab-button {
 	text-align:center;
@@ -523,9 +530,11 @@ footer nav li a {
 	padding: 12px;
 	text-decoration: none;
 	color: var(--font-light-w);
-	font-family: "Comic Sans MS";
-	font-size: 17px;
-	font-weight: bold;
+	font-family: "Lora", serif;
+	font-size: 20px;
+	font-weight: 500;
+	font-style: italic;
+	font-optical-sizing: auto;
 	list-style: none;
 	-webkit-transition: all .25s ease;
 	/*fadding time*/
@@ -540,10 +549,12 @@ footer nav li a {
 .copyright-text span {
 	color: var(--font-light-w);
 	/*font color*/
-	font-family: "Comic Sans MS";
+	font-family: "Lora", serif;
 	/*font style*/
-	font-size: 17px;
+	font-size: 18px;
 	font-weight: bold;
+	font-weight: 500;
+	font-optical-sizing: auto;
 	/*font size*/
 	padding-left: 4%;
 }
@@ -628,7 +639,7 @@ footer nav li a:hover {
 		padding:16px 16px 0 0;
 		transition: all 0.3s ease-in-out;
 	}
-	header nav {
+	#header nav {
 		opacity: 0;
 		visibility: hidden;
 		overflow: hidden;
@@ -642,7 +653,7 @@ footer nav li a:hover {
 		height: 0px;
 		transition: visibility 1s, opacity 1s, height 0.5s linear ;
 	}
-	header nav ul {
+	#header nav ul {
 		width: 100%;
 		background-color: var(--main-color);
 		display: flex;
@@ -669,7 +680,7 @@ footer nav li a:hover {
 	.icon-nav-active .line:nth-child(3) {
 		transform: translateY(-15px) rotate(-90deg);
 	}
-	header nav.responsive {
+	#header nav.responsive {
 		opacity: 1;
 		visibility: visible;
 		height: 210px;
