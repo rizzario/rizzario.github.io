@@ -698,11 +698,15 @@ footer nav li a:hover {
 		height: 400px;
 	}
 	.Text-about {
-		transform: translate(-50%, 0%);
+		transform: translate(0%, 0%);
+		top: 0;
+		left: 0;
 		position: relative;
 	}
 	.Image-Desc .big {
-		transform: translate(-50%, 0%);
+		transform: translate(0%, 0%);
+		top: 0;
+		left: 0;
 		position: relative;
 	}
 	#Text-Desc{
