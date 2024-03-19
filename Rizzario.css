@@ -594,29 +594,55 @@ footer nav li a:hover {
 	.form-detail {
 		max-width: 450px;
 	}
+	.Image-Desc .big {
+		transform: translate(30%, 0%) !important;
+		top: 0;
+		left: 0;
+		position: relative;
+	}
 }
 @media screen and (max-width: 490px) {
-
 	.form-detail {
 		width: 400px;
 	}
+	.Image-Desc .big {
+		transform: translate(20%, 0%) !important;
+		top: 0;
+		left: 0;
+		position: relative;
+	}
 }
 @media screen and (max-width: 440px) {
-
 	.form-detail {
 		width: 350px;
 	}
+	.Image-Desc .big {
+		transform: translate(8%, 0%) !important;
+		top: 0;
+		left: 0;
+		position: relative;
+	}
 }
-@media screen and (max-width: 440px) {
-
+@media screen and (max-width: 390px) {
 	.form-detail {
 		width: 300px;
 	}
+	.Image-Desc .big {
+		transform: translate(4%, 0%) !important;
+		top: 0;
+		left: 0;
+		position: relative;
+	}
 }
 @media screen and (max-width: 340px) {
-
 	.form-detail {
 		width: 100%;
+	}
+	.Image-Desc .big {
+		transform: translate(0%, 0%) !important;
+		top: 0;
+		left: 0;
+		position: relative;
 	}
 }
 
@@ -698,13 +724,13 @@ footer nav li a:hover {
 		height: 400px;
 	}
 	.Text-about {
-		transform: translate(0%, 0%);
+		transform: translate(8%, 0%);
 		top: 0;
 		left: 0;
 		position: relative;
 	}
 	.Image-Desc .big {
-		transform: translate(0%, 0%);
+		transform: translate(45%, 0%);
 		top: 0;
 		left: 0;
 		position: relative;
